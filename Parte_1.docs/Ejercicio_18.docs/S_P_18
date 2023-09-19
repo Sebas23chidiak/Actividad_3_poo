@@ -1,0 +1,22 @@
+package P_18;
+
+public class SalarioEmpleado {
+    double horasTrabajadas, tarifaHora, porcentajeRetencion;
+    
+    public SalarioEmpleado(double horas, double tarifa, double retencion) {
+        this.horasTrabajadas = horas;
+        this.tarifaHora = tarifa;
+        this.porcentajeRetencion = retencion;
+    }
+    
+    public double calcularSalarioBruto() {
+        double bruto = horasTrabajadas * tarifaHora;
+        return bruto;
+    }
+    
+    public double calcularSalarioNeto() {
+        double bruto = calcularSalarioBruto();
+        double neto = bruto - (porcentajeRetencion * bruto);
+        return neto;
+    }
+}
